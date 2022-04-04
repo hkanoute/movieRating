@@ -7,14 +7,7 @@ import HomeScreen from "./HomeScreen";
 const API = () => {
     const [valid, setValid] = useState(false);
     const [name, setName] = useState();
-    const [list, setList] = useState([{
-        id: 0,
-        title: "Spiderman",
-        resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis ligula lectus, vel ",
-        comment: "Lorem ipsum estati elitae",
-        rating: 20,
-        image: ""
-    }]);
+    const [list, setList] = useState([]);
     const navigation = useNavigation();
     const baseUrl = "https://api.themoviedb.org/3/search/movie?api_key=da54f4648a6050b16f34a0f0141e851f&language=fr&query=  ";
 
@@ -44,14 +37,6 @@ const API = () => {
             <Button
                 title="Rechercher"
                 onPress={() => {
-                    setList([{
-                        id: 0,
-                        title: "Spiderman",
-                        resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis ligula lectus, vel ",
-                        comment: "Lorem ipsum estati elitae",
-                        rating: 20,
-                        image: ""
-                    }])
                     fetchFilm(name).then((json) => {
                         for (let i = 0; i < json.results.length; i++) {
                             setList((current) => [...current, {
@@ -103,7 +88,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         paddingTop: 20
-
     },
     image: {
         width: 400,
@@ -118,7 +102,6 @@ const styles = StyleSheet.create({
     bgDark: {
         backgroundColor: "#D3D3D3",
     },
-
 });
 
 export default API;

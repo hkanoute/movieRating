@@ -7,13 +7,7 @@ import * as SecureStore from 'expo-secure-store';
 const HomeScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const [list, setList] = useState([{
-    id: 0,
-    title: "Spiderman",
-    resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis ligula lectus, vel ",
-    comment: "Lorem ipsum estati elitae",
-    rating: 20
-  }]);
+  const [list, setList] = useState([]);
 
   async function save(key, value) {
     try {

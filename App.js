@@ -15,25 +15,6 @@ import API from "./component/API";
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
-const isLogged = false;
-
-
-/*const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          initialParams={{ addFilm: null }}
-        />
-        <Stack.Screen name="Ajout de film" component={AddScreen} />
-        <Stack.Screen name="Détails du film" component={Details} />
-        <Stack.Screen name="Login" component={Login} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};*/
 
 const App = () => {
   return (
